@@ -1,76 +1,9 @@
 ---
 const BASE = import.meta.env.BASE_URL;
 
-const projectGroups = [
+const timelineYears = [
   {
-    category: "Apple Vision Pro",
-    projects: [
-      {
-        id: "shape-invader",
-        title: "Shape Invader",
-        platform: "Apple Vision Pro",
-        description: "Developed and launched an immersive spatial AR/VR game using RealityKit and SwiftUI. Featured among the first 600 apps globally available on the App Store during the Vision Pro launch.",
-        image: "/images/shape_invader_gameplay_ar.png",
-        appStoreUrl: null,
-        sections: [
-          {
-            heading: "Spatial AR/VR Gameplay",
-            text: ["Designed a spatial computing game specifically for Apple Vision Pro.", "Successfully launched alongside the device's release as one of the first 600 apps available globally on the App Store.", "Developed dynamic 3D gameplay using RealityKit's physics engine for accurate collision detection and interactive particle emitters."],
-            image: "/images/shape_invader_gameplay_ar.png",
-            imageAlt: "Shape Invader Augmented Reality Gameplay Interface",
-            imageLeft: true,
-          },
-          {
-            heading: "Immersive Environments",
-            text: ["Implemented diverse spatial environments seamlessly blending digital content with the real world.", "Players can seamlessly transition between fully immersive VR space scenes and AR pass-through modes depending on their preference."],
-            image: "/images/shape_invader_gameplay_vr.png",
-            imageAlt: "Shape Invader Virtual Reality Gameplay in Space Environment",
-            imageLeft: false,
-          },
-          {
-            heading: "Spatial UI & Game States",
-            text: ["Utilized SwiftUI to craft intuitive spatial interfaces that float seamlessly in the user's environment.", "Engineered a dynamic UI system that adapts to various game states (Main Menu, Gameplay, Game Over) and visually aligns with the chosen AR or VR environment."],
-            doubleImages: ["/images/shape_invader_menu_ar.png", "/images/shape_invader_gameover_vr.png"],
-            doubleAlts: ["Shape Invader Main Menu in Augmented Reality", "Shape Invader Game Over Screen in Virtual Reality"],
-            imageLeft: true,
-          },
-        ],
-      },
-      {
-        id: "airshow",
-        title: "Aircraft Show",
-        platform: "Apple Vision Pro",
-        description: "A spatial computing experience built with SwiftUI and RealityKit, enabling users to visualize and interact with high-fidelity 3D aircraft models in fully immersive environments.",
-        image: "/images/airshow_flight.jpg",
-        appStoreUrl: null,
-        sections: [
-          {
-            heading: "Immersive Spatial Computing",
-            text: ["Developed a spatial computing application natively for Apple Vision Pro using Swift, SwiftUI, and RealityKit.", "Created intuitive, gaze-based glassmorphism user interfaces for users to access detailed aircraft specifications, toggle environments, and control animations seamlessly in their physical space."],
-            image: "/images/airshow_ui.png",
-            imageAlt: "Spatial User Interface for Airshow in Augmented Reality",
-            imageLeft: true,
-          },
-          {
-            heading: "Realistic Flight Dynamics",
-            text: ["Utilized RealityKit's Entity Component System (ECS) to build robust simulations.", "Implemented realistic flight dynamics and multi-aircraft formations directly within the spatial environment.", "Added interactive altitude and speed controls to manipulate the aircraft behavior in real-time."],
-            doubleImages: ["/images/airshow_formation.png", "/images/airshow_flight.jpg"],
-            doubleAlts: ["F-35 Fighter Jets Flying in Formation in Augmented Reality", "F-35 Aircraft Model Displayed in Augmented Reality"],
-            imageLeft: false,
-          },
-          {
-            heading: "Dynamic Environments",
-            text: ["Implemented fully immersive 3D environments, transporting users to realistic landscapes.", "Leveraged advanced lighting, shadows, and spatial audio to make the high-fidelity 3D models of stealth bombers and fighter jets feel remarkably real."],
-            image: "/images/airshow_museum.jpg",
-            imageAlt: "B-2 Spirit Stealth Bomber Showcased in Immersive Virtual Environment",
-            imageLeft: true,
-          },
-        ],
-      },
-    ],
-  },
-  {
-    category: "IoT & Embedded Systems",
+    year: "2022",
     projects: [
       {
         id: "smart-clock",
@@ -119,6 +52,113 @@ const projectGroups = [
           },
         ],
       },
+    ],
+  },
+  {
+    year: "2023",
+    projects: [
+      {
+        id: "chiro-app",
+        title: "Commonwealth Family Chiro",
+        platform: "iOS App",
+        description: "A comprehensive native iOS application empowering a local clinic with seamless online appointment scheduling, patient reviews, and streamlined communication.",
+        backgroundColor: "linear-gradient(135deg, rgba(63, 185, 80, 0.2), rgba(13, 17, 23, 1))",
+        appStoreUrl: "https://apps.apple.com/us/app/commonwealth-fmly-chiropractic/id6446209042",
+        appStoreLabel: "View on App Store",
+        appStoreCaption: null,
+        sections: [
+          {
+            heading: "Custom User Interface",
+            text: ["Designed and developed a fully native iOS application from scratch using Swift and Storyboards.", "Created a custom, user-friendly interface to enhance patient engagement and provide quick access to clinic information, locations, and services."],
+            doubleImages: ["/images/chiro_about_top.png", "/images/chiro_about_bottom.png"],
+            doubleAlts: ["About Us Interface of the Chiropractic iOS Application", "Clinic Services Interface of the Chiropractic iOS Application"],
+            imageLeft: true,
+          },
+          {
+            heading: "Online Scheduling & Engagement",
+            text: ["Integrated seamless online appointment scheduling for multiple clinic locations (Elizabethtown and Hodgenville).", "Enabled patients to easily leave reviews and access essential clinic details on the go.", "Successfully launched on the App Store, where it maintains a 5-star rating and is utilized daily by patients."],
+            image: "/images/chiro_appointments.png",
+            imageAlt: "Online Appointment Scheduling Interface of the Chiropractic iOS Application",
+            imageLeft: false,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    year: "2024",
+    projects: [
+      {
+        id: "shape-invader",
+        title: "Shape Invader",
+        platform: "Apple Vision Pro",
+        description: "Developed and launched an immersive spatial AR/VR game using RealityKit and SwiftUI. Featured among the first 600 apps globally available on the App Store during the Vision Pro launch.",
+        image: "/images/shape_invader_gameplay_ar.png",
+        appStoreUrl: "https://apps.apple.com/us/app/shape-invader/id6476964958",
+        appStoreLabel: "View on App Store",
+        appStoreCaption: null,
+        sections: [
+          {
+            heading: "Spatial AR/VR Gameplay",
+            text: ["Designed a spatial computing game specifically for Apple Vision Pro.", "Successfully launched alongside the device's release as one of the first 600 apps available globally on the App Store.", "Developed dynamic 3D gameplay using RealityKit's physics engine for accurate collision detection and interactive particle emitters."],
+            image: "/images/shape_invader_gameplay_ar.png",
+            imageAlt: "Shape Invader Augmented Reality Gameplay Interface",
+            imageLeft: true,
+          },
+          {
+            heading: "Immersive Environments",
+            text: ["Implemented diverse spatial environments seamlessly blending digital content with the real world.", "Players can seamlessly transition between fully immersive VR space scenes and AR pass-through modes depending on their preference."],
+            image: "/images/shape_invader_gameplay_vr.png",
+            imageAlt: "Shape Invader Virtual Reality Gameplay in Space Environment",
+            imageLeft: false,
+          },
+          {
+            heading: "Spatial UI & Game States",
+            text: ["Utilized SwiftUI to craft intuitive spatial interfaces that float seamlessly in the user's environment.", "Engineered a dynamic UI system that adapts to various game states (Main Menu, Gameplay, Game Over) and visually aligns with the chosen AR or VR environment."],
+            doubleImages: ["/images/shape_invader_menu_ar.png", "/images/shape_invader_gameover_vr.png"],
+            doubleAlts: ["Shape Invader Main Menu in Augmented Reality", "Shape Invader Game Over Screen in Virtual Reality"],
+            imageLeft: true,
+          },
+        ],
+      },
+      {
+        id: "airshow",
+        title: "Aircraft Show",
+        platform: "Apple Vision Pro",
+        description: "A spatial computing experience built with SwiftUI and RealityKit, enabling users to visualize and interact with high-fidelity 3D aircraft models in fully immersive environments.",
+        image: "/images/airshow_flight.jpg",
+        appStoreUrl: "https://apps.apple.com/us/app/aircraft-show/id6477761518",
+        appStoreLabel: "View on App Store",
+        appStoreCaption: null,
+        sections: [
+          {
+            heading: "Immersive Spatial Computing",
+            text: ["Developed a spatial computing application natively for Apple Vision Pro using Swift, SwiftUI, and RealityKit.", "Created intuitive, gaze-based glassmorphism user interfaces for users to access detailed aircraft specifications, toggle environments, and control animations seamlessly in their physical space."],
+            image: "/images/airshow_ui.png",
+            imageAlt: "Spatial User Interface for Airshow in Augmented Reality",
+            imageLeft: true,
+          },
+          {
+            heading: "Realistic Flight Dynamics",
+            text: ["Utilized RealityKit's Entity Component System (ECS) to build robust simulations.", "Implemented realistic flight dynamics and multi-aircraft formations directly within the spatial environment.", "Added interactive altitude and speed controls to manipulate the aircraft behavior in real-time."],
+            doubleImages: ["/images/airshow_formation.png", "/images/airshow_flight.jpg"],
+            doubleAlts: ["F-35 Fighter Jets Flying in Formation in Augmented Reality", "F-35 Aircraft Model Displayed in Augmented Reality"],
+            imageLeft: false,
+          },
+          {
+            heading: "Dynamic Environments",
+            text: ["Implemented fully immersive 3D environments, transporting users to realistic landscapes.", "Leveraged advanced lighting, shadows, and spatial audio to make the high-fidelity 3D models of stealth bombers and fighter jets feel remarkably real."],
+            image: "/images/airshow_museum.jpg",
+            imageAlt: "B-2 Spirit Stealth Bomber Showcased in Immersive Virtual Environment",
+            imageLeft: true,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    year: "2026",
+    projects: [
       {
         id: "smart-aquarium",
         title: "Smart Aquarium",
@@ -166,49 +206,22 @@ const projectGroups = [
       },
     ],
   },
-  {
-    category: "Native iOS Applications",
-    projects: [
-      {
-        id: "chiro-app",
-        title: "Commonwealth Family Chiro",
-        platform: "iOS App",
-        description: "A comprehensive native iOS application empowering a local clinic with seamless online appointment scheduling, patient reviews, and streamlined communication.",
-        backgroundColor: "linear-gradient(135deg, rgba(63, 185, 80, 0.2), rgba(13, 17, 23, 1))",
-        appStoreUrl: "https://apps.apple.com/us/app/commonwealth-fmly-chiropractic/id6446209042",
-        appStoreLabel: "View on App Store",
-        appStoreCaption: null,
-        sections: [
-          {
-            heading: "Custom User Interface",
-            text: ["Designed and developed a fully native iOS application from scratch using Swift and Storyboards.", "Created a custom, user-friendly interface to enhance patient engagement and provide quick access to clinic information, locations, and services."],
-            doubleImages: ["/images/chiro_about_top.png", "/images/chiro_about_bottom.png"],
-            doubleAlts: ["About Us Interface of the Chiropractic iOS Application", "Clinic Services Interface of the Chiropractic iOS Application"],
-            imageLeft: true,
-          },
-          {
-            heading: "Online Scheduling & Engagement",
-            text: ["Integrated seamless online appointment scheduling for multiple clinic locations (Elizabethtown and Hodgenville).", "Enabled patients to easily leave reviews and access essential clinic details on the go.", "Successfully launched on the App Store, where it maintains a 5-star rating and is utilized daily by patients."],
-            image: "/images/chiro_appointments.png",
-            imageAlt: "Online Appointment Scheduling Interface of the Chiropractic iOS Application",
-            imageLeft: false,
-          },
-        ],
-      },
-    ],
-  },
 ];
 ---
 
 <section id="projects" class="section container">
   <h2 class="section-title">Featured Projects</h2>
 
-  <div class="project-categories">
-    {projectGroups.map((group) => (
-      <div class="category-section">
-        <h3 class="category-heading gradient-text">{group.category}</h3>
+  <div class="timeline-wrapper">
+    {timelineYears.map((yearGroup) => (
+      <div class="year-group">
+        <div class="year-marker">
+          <div class="year-line"></div>
+          <span class="year-badge gradient-text">{yearGroup.year}</span>
+          <div class="year-line"></div>
+        </div>
         <div class="projects-list">
-          {group.projects.map((project) => (
+          {yearGroup.projects.map((project) => (
             <div class="project-accordion glass" data-id={project.id}>
               <!-- Card Header (always visible) -->
               <div class="accordion-header" role="button" tabindex="0" aria-expanded="false">
@@ -328,16 +341,41 @@ const projectGroups = [
 </script>
 
 <style>
-  .category-section {
-    margin-bottom: 60px;
+  /* Timeline wrapper */
+  .timeline-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
   }
-  .category-section:last-child { margin-bottom: 0; }
 
-  .category-heading {
+  .year-group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  /* Year divider */
+  .year-marker {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 8px;
+  }
+
+  .year-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border-color), transparent);
+  }
+
+  .year-badge {
     font-size: 2rem;
-    margin-bottom: 24px;
-    font-weight: 700;
-    display: inline-block;
+    font-weight: 800;
+    letter-spacing: 2px;
+    white-space: nowrap;
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   .projects-list {
@@ -417,12 +455,6 @@ const projectGroups = [
   }
   .project-accordion.open .chevron {
     transform: rotate(180deg);
-  }
-  .toggle-label {
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: var(--text-secondary);
-    letter-spacing: 0.5px;
   }
 
   /* App store button inside card */
@@ -567,5 +599,6 @@ const projectGroups = [
     .double-images { flex-direction: column; }
     .double-images img { width: 100%; }
     .accordion-header { gap: 14px; padding: 16px; }
+    .year-badge { font-size: 1.5rem; }
   }
 </style>
