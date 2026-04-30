@@ -1,65 +1,202 @@
 ---
+const BASE = import.meta.env.BASE_URL;
+
 const projectGroups = [
   {
     category: "Apple Vision Pro",
     projects: [
       {
+        id: "shape-invader",
         title: "Shape Invader",
         platform: "Apple Vision Pro",
-        description:
-          "Developed and launched an immersive spatial AR/VR game using RealityKit and SwiftUI. Featured among the first 600 apps globally available on the App Store during the Vision Pro launch.",
-        link: "/shape-invader",
+        description: "Developed and launched an immersive spatial AR/VR game using RealityKit and SwiftUI. Featured among the first 600 apps globally available on the App Store during the Vision Pro launch.",
         image: "/images/shape_invader_gameplay_ar.png",
-        linkText: "View Case Study",
+        appStoreUrl: null,
+        sections: [
+          {
+            heading: "Spatial AR/VR Gameplay",
+            text: ["Designed a spatial computing game specifically for Apple Vision Pro.", "Successfully launched alongside the device's release as one of the first 600 apps available globally on the App Store.", "Developed dynamic 3D gameplay using RealityKit's physics engine for accurate collision detection and interactive particle emitters."],
+            image: "/images/shape_invader_gameplay_ar.png",
+            imageAlt: "Shape Invader Augmented Reality Gameplay Interface",
+            imageLeft: true,
+          },
+          {
+            heading: "Immersive Environments",
+            text: ["Implemented diverse spatial environments seamlessly blending digital content with the real world.", "Players can seamlessly transition between fully immersive VR space scenes and AR pass-through modes depending on their preference."],
+            image: "/images/shape_invader_gameplay_vr.png",
+            imageAlt: "Shape Invader Virtual Reality Gameplay in Space Environment",
+            imageLeft: false,
+          },
+          {
+            heading: "Spatial UI & Game States",
+            text: ["Utilized SwiftUI to craft intuitive spatial interfaces that float seamlessly in the user's environment.", "Engineered a dynamic UI system that adapts to various game states (Main Menu, Gameplay, Game Over) and visually aligns with the chosen AR or VR environment."],
+            doubleImages: ["/images/shape_invader_menu_ar.png", "/images/shape_invader_gameover_vr.png"],
+            doubleAlts: ["Shape Invader Main Menu in Augmented Reality", "Shape Invader Game Over Screen in Virtual Reality"],
+            imageLeft: true,
+          },
+        ],
       },
       {
+        id: "airshow",
         title: "Aircraft Show",
         platform: "Apple Vision Pro",
-        description:
-          "A spatial computing experience built with SwiftUI and RealityKit, enabling users to visualize and interact with high-fidelity 3D aircraft models in fully immersive environments.",
-        link: "/airshow",
+        description: "A spatial computing experience built with SwiftUI and RealityKit, enabling users to visualize and interact with high-fidelity 3D aircraft models in fully immersive environments.",
         image: "/images/airshow_flight.jpg",
-        linkText: "View Case Study",
+        appStoreUrl: null,
+        sections: [
+          {
+            heading: "Immersive Spatial Computing",
+            text: ["Developed a spatial computing application natively for Apple Vision Pro using Swift, SwiftUI, and RealityKit.", "Created intuitive, gaze-based glassmorphism user interfaces for users to access detailed aircraft specifications, toggle environments, and control animations seamlessly in their physical space."],
+            image: "/images/airshow_ui.png",
+            imageAlt: "Spatial User Interface for Airshow in Augmented Reality",
+            imageLeft: true,
+          },
+          {
+            heading: "Realistic Flight Dynamics",
+            text: ["Utilized RealityKit's Entity Component System (ECS) to build robust simulations.", "Implemented realistic flight dynamics and multi-aircraft formations directly within the spatial environment.", "Added interactive altitude and speed controls to manipulate the aircraft behavior in real-time."],
+            doubleImages: ["/images/airshow_formation.png", "/images/airshow_flight.jpg"],
+            doubleAlts: ["F-35 Fighter Jets Flying in Formation in Augmented Reality", "F-35 Aircraft Model Displayed in Augmented Reality"],
+            imageLeft: false,
+          },
+          {
+            heading: "Dynamic Environments",
+            text: ["Implemented fully immersive 3D environments, transporting users to realistic landscapes.", "Leveraged advanced lighting, shadows, and spatial audio to make the high-fidelity 3D models of stealth bombers and fighter jets feel remarkably real."],
+            image: "/images/airshow_museum.jpg",
+            imageAlt: "B-2 Spirit Stealth Bomber Showcased in Immersive Virtual Environment",
+            imageLeft: true,
+          },
+        ],
       },
-    ]
+    ],
   },
   {
     category: "IoT & Embedded Systems",
     projects: [
       {
+        id: "smart-clock",
         title: "Smart Clock",
         platform: "IoT / 3D-Printed",
-        description:
-          "An internet-connected smart clock featuring real-time weather updates and dynamic LED effects. Built with a custom PCB, companion iOS app, AWS integration, and a custom C++ WeatherKit library.",
-        link: "/smart-clock",
+        description: "An internet-connected smart clock featuring real-time weather updates and dynamic LED effects. Built with a custom PCB, companion iOS app, AWS integration, and a custom C++ WeatherKit library.",
         image: "/images/smart_clock_final.jpg",
-        linkText: "View Case Study",
+        appStoreUrl: "https://apps.apple.com/us/app/prismbox-connect/id6744375627",
+        appStoreLabel: "View Custom iOS Control App",
+        appStoreCaption: "The custom-built iOS companion app used to remotely control the smart clock's lighting, weather location, and settings such as display layout.",
+        sections: [
+          {
+            heading: "Vibrant LED Effects",
+            text: ["Has dynamic LED lighting that can be customized through the companion app.", "Users can select custom colors, dual gradients, and different animated effects."],
+            image: "/images/clock_purple.jpg",
+            imageAlt: "Fully Assembled Smart Clock Displaying Purple LED Effects",
+            imageLeft: true,
+          },
+          {
+            heading: "3D Enclosure Design",
+            text: ["Designed a custom 3D-printable enclosure using CAD software like Autodesk Fusion 360 to house the custom PCB and dual speakers.", "Engineered the casing to provide optimal acoustics for music playback and a clean display area for the OLED screen."],
+            image: "/images/smart_clock_cad.png",
+            imageAlt: "3D CAD Design of the Smart Clock Enclosure",
+            imageLeft: false,
+          },
+          {
+            heading: "PCB Layout and Design",
+            text: ["Designed, ordered, and assembled a custom Printed Circuit Board (PCB) to handle power distribution, microcontroller interfacing, and LED drivers.", "Ensured precise routing for signal integrity and reliable operation of the clock's components."],
+            image: "/images/smart_clock_pcb.png",
+            imageAlt: "Custom Printed Circuit Board Layout for Smart Clock",
+            imageLeft: true,
+          },
+          {
+            heading: "Schematic",
+            text: ["Architected the complete electrical schematic integrating an ESP32 microcontroller.", "Planned the circuitry to support real-time weather updates, LED control, and seamless internet connectivity."],
+            image: "/images/smart_clock_schematic.png",
+            imageAlt: "Electrical Schematic Design for Smart Clock",
+            imageLeft: false,
+          },
+          {
+            heading: "Software & Cloud Integration",
+            text: ["Built a custom iOS app to control the clock remotely, including LED visual effects and music playback.", "Implemented AWS API Gateway for robust cloud services and over-the-air (OTA) firmware updates via AWS S3.", "Created a custom C++ library to directly utilize Apple's WeatherKit API on Arduino hardware for live weather forecasting."],
+            doubleImages: ["/images/app_home.png", "/images/app_settings.png"],
+            doubleAlts: ["iOS Companion App Home Screen Interface", "iOS Companion App Settings and Configuration Interface"],
+            imageLeft: true,
+          },
+        ],
       },
       {
+        id: "smart-aquarium",
         title: "Smart Aquarium",
         platform: "IoT / 3D-Printed",
-        description:
-          "An automated aquarium system featuring feeding reminders, precise water quality monitoring, custom LED lighting, and seamless Apple AccessorySetupKit integration.",
-        link: "/smart-aquarium",
+        description: "An automated aquarium system featuring feeding reminders, precise water quality monitoring, custom LED lighting, and seamless Apple AccessorySetupKit integration.",
         image: "/images/aquarium_glowing.jpg",
-        linkText: "View Case Study",
+        appStoreUrl: null,
+        sections: [
+          {
+            heading: "Custom 3D Enclosure Design",
+            text: ["Designed and 3D printed a custom aquarium lid using Autodesk Fusion 360.", "Engineered the structure to house the electronics and sensors safely above the water line while maintaining a sleek aesthetic."],
+            doubleImages: ["/images/aquarium_cad_full.png", "/images/aquarium_cad_lid.png"],
+            doubleAlts: ["Complete 3D CAD Model of the Smart Aquarium Ecosystem", "Detailed Interior CAD View of the Smart Aquarium Lid"],
+            imageLeft: true,
+          },
+          {
+            heading: "Custom PCB Design",
+            text: ["Designed a custom printed circuit board (PCB) to seamlessly integrate the ESP32 microcontroller with all peripheral sensors.", "Engineered the board to handle power distribution for the sensors and custom LED lighting."],
+            image: "/images/aquarium_pcb.png",
+            imageAlt: "Custom Printed Circuit Board Layout for Aquarium Electronics",
+            imageLeft: false,
+          },
+          {
+            heading: "Hardware & Sensor Integration",
+            text: ["Powered by an ESP32 microcontroller that manages a complex array of peripherals and sensors.", "Integrated water quality monitoring (TDS and temperature), a water level sensor, automated bubbler control, and a motorized feeding mechanism.", "Has custom warning light and manual feeding button to alert user when its been too long since last feeding."],
+            image: "/images/aquarium_wiring.jpg",
+            imageAlt: "Detailed Wiring and Sensor Integration within the Smart Aquarium",
+            imageLeft: true,
+          },
+          {
+            heading: "Custom LED Lighting",
+            text: ["Engineered dynamic custom LED lighting that can be personalized directly from the app to create stunning visual effects.", "The lighting system is fully controllable, allowing users to match the ambiance to their environment."],
+            image: "/images/aquarium_glowing.jpg",
+            imageAlt: "Smart Aquarium Illuminated with Custom Green LED Lighting",
+            imageLeft: false,
+          },
+          {
+            heading: "Software & iOS Connectivity",
+            text: ["Integrated Apple's AccessorySetupKit for secure, seamless Bluetooth and Wi-Fi pairing directly from an iOS device.", "Created a custom iOS companion app using SwiftUI to control the aquarium, schedule automated feeding times, and monitor water parameters in real-time."],
+            doubleImages: ["/images/aquarium_app_finding.png", "/images/aquarium_app_dashboard.png"],
+            doubleAlts: ["iOS Device Pairing with Smart Aquarium via Apple AccessorySetupKit", "Companion iOS Application Dashboard Built with SwiftUI"],
+            imageLeft: true,
+          },
+        ],
       },
-    ]
+    ],
   },
   {
     category: "Native iOS Applications",
     projects: [
       {
+        id: "chiro-app",
         title: "Commonwealth Family Chiro",
         platform: "iOS App",
-        description:
-          "A comprehensive native iOS application empowering a local clinic with seamless online appointment scheduling, patient reviews, and streamlined communication.",
-        link: "/chiro-app",
+        description: "A comprehensive native iOS application empowering a local clinic with seamless online appointment scheduling, patient reviews, and streamlined communication.",
         backgroundColor: "linear-gradient(135deg, rgba(63, 185, 80, 0.2), rgba(13, 17, 23, 1))",
-        linkText: "View Case Study",
-      }
-    ]
-  }
+        appStoreUrl: "https://apps.apple.com/us/app/commonwealth-fmly-chiropractic/id6446209042",
+        appStoreLabel: "View on App Store",
+        appStoreCaption: null,
+        sections: [
+          {
+            heading: "Custom User Interface",
+            text: ["Designed and developed a fully native iOS application from scratch using Swift and Storyboards.", "Created a custom, user-friendly interface to enhance patient engagement and provide quick access to clinic information, locations, and services."],
+            doubleImages: ["/images/chiro_about_top.png", "/images/chiro_about_bottom.png"],
+            doubleAlts: ["About Us Interface of the Chiropractic iOS Application", "Clinic Services Interface of the Chiropractic iOS Application"],
+            imageLeft: true,
+          },
+          {
+            heading: "Online Scheduling & Engagement",
+            text: ["Integrated seamless online appointment scheduling for multiple clinic locations (Elizabethtown and Hodgenville).", "Enabled patients to easily leave reviews and access essential clinic details on the go.", "Successfully launched on the App Store, where it maintains a 5-star rating and is utilized daily by patients."],
+            image: "/images/chiro_appointments.png",
+            imageAlt: "Online Appointment Scheduling Interface of the Chiropractic iOS Application",
+            imageLeft: false,
+          },
+        ],
+      },
+    ],
+  },
 ];
 ---
 
@@ -67,147 +204,369 @@ const projectGroups = [
   <h2 class="section-title">Featured Projects</h2>
 
   <div class="project-categories">
-    {
-      projectGroups.map((group) => (
-        <div class="category-section">
-          <h3 class="category-heading gradient-text">{group.category}</h3>
-          <div class="projects-grid">
-            {
-              group.projects.map((project) => (
-                <div class="project-card glass">
-                  <a href={project.link} class="project-image-link">
-                    <div
-                      class="project-image"
-                      style={project.image ? `background-image: url('${import.meta.env.BASE_URL}${project.image}')` : `background: ${project.backgroundColor}; display: flex; align-items: center; justify-content: center;`}
-                    >
-                      {project.logo && (
-                        <img 
-                          src={project.logo} 
-                          alt={`${project.title} Logo`} 
-                          style="height: 120px; width: auto; object-fit: contain; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.3);" 
-                        />
-                      )}
-                      <div class="project-overlay">
-                        <span class="project-link-btn">{project.linkText}</span>
+    {projectGroups.map((group) => (
+      <div class="category-section">
+        <h3 class="category-heading gradient-text">{group.category}</h3>
+        <div class="projects-list">
+          {group.projects.map((project) => (
+            <div class="project-accordion glass" data-id={project.id}>
+              <!-- Card Header (always visible) -->
+              <div class="accordion-header" role="button" tabindex="0" aria-expanded="false">
+                <div
+                  class="accordion-thumb"
+                  style={project.image
+                    ? `background-image: url('${BASE}${project.image}')`
+                    : `background: ${project.backgroundColor}`}
+                >
+                </div>
+                <div class="accordion-meta">
+                  <span class="platform">{project.platform}</span>
+                  <h3>{project.title}</h3>
+                  <p>{project.description}</p>
+                  {project.appStoreUrl && (
+                    <a href={project.appStoreUrl} target="_blank" class="app-store-btn" onclick="event.stopPropagation()">
+                      {project.appStoreLabel}
+                    </a>
+                  )}
+                </div>
+                <div class="accordion-toggle">
+                  <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                  <span class="toggle-label">Case Study</span>
+                </div>
+              </div>
+
+              <!-- Expandable Case Study Content -->
+              <div class="accordion-body">
+                <div class="case-study-inner">
+                  {project.sections.map((section, i) => (
+                    <div class={`detail-section ${i % 2 === 0 ? '' : 'reverse'}`}>
+                      <div class="text-content">
+                        <h4>{section.heading}</h4>
+                        <ul>
+                          {section.text.map((point) => <li>{point}</li>)}
+                        </ul>
+                      </div>
+                      <div class="image-content">
+                        {section.doubleImages ? (
+                          <div class="double-images">
+                            <img src={BASE + section.doubleImages[0]} alt={section.doubleAlts[0]} class="zoomable" />
+                            <img src={BASE + section.doubleImages[1]} alt={section.doubleAlts[1]} class="zoomable" />
+                          </div>
+                        ) : (
+                          <img src={BASE + section.image} alt={section.imageAlt} class="single-image zoomable" />
+                        )}
                       </div>
                     </div>
-                  </a>
-                  <div class="project-info">
-                    <span class="platform">{project.platform}</span>
-                    <h3>{project.title}</h3>
-                    <p>{project.description}</p>
-                  </div>
+                  ))}
                 </div>
-              ))
-            }
-          </div>
+              </div>
+            </div>
+          ))}
         </div>
-      ))
-    }
+      </div>
+    ))}
   </div>
 </section>
+
+<!-- Shared image zoom modal -->
+<dialog id="proj-modal" class="proj-modal">
+  <div class="proj-modal-content">
+    <span class="proj-close-btn">&times;</span>
+    <img id="proj-modal-img" src="" alt="Full size preview" />
+  </div>
+</dialog>
+
+<script>
+  // Accordion toggle
+  document.querySelectorAll('.accordion-header').forEach((header) => {
+    const toggle = () => {
+      const accordion = header.closest('.project-accordion') as HTMLElement;
+      const body = accordion.querySelector('.accordion-body') as HTMLElement;
+      const isOpen = accordion.classList.contains('open');
+
+      if (isOpen) {
+        body.style.maxHeight = body.scrollHeight + 'px';
+        requestAnimationFrame(() => {
+          body.style.maxHeight = '0';
+        });
+        accordion.classList.remove('open');
+        header.setAttribute('aria-expanded', 'false');
+      } else {
+        accordion.classList.add('open');
+        header.setAttribute('aria-expanded', 'true');
+        body.style.maxHeight = body.scrollHeight + 'px';
+        body.addEventListener('transitionend', () => {
+          if (accordion.classList.contains('open')) {
+            body.style.maxHeight = 'none';
+          }
+        }, { once: true });
+      }
+    };
+
+    header.addEventListener('click', toggle);
+    header.addEventListener('keydown', (e: Event) => {
+      const ke = e as KeyboardEvent;
+      if (ke.key === 'Enter' || ke.key === ' ') { e.preventDefault(); toggle(); }
+    });
+  });
+
+  // Image zoom modal
+  const modal = document.getElementById('proj-modal') as HTMLDialogElement;
+  const modalImg = document.getElementById('proj-modal-img') as HTMLImageElement;
+  const closeBtn = document.querySelector('.proj-close-btn');
+
+  document.querySelectorAll('.zoomable').forEach((img) => {
+    img.addEventListener('click', () => {
+      modalImg.src = (img as HTMLImageElement).src;
+      modal.showModal();
+    });
+  });
+
+  closeBtn?.addEventListener('click', () => modal.close());
+  modal?.addEventListener('click', (e) => { if (e.target === modal) modal.close(); });
+</script>
 
 <style>
   .category-section {
     margin-bottom: 60px;
   }
-
-  .category-section:last-child {
-    margin-bottom: 0;
-  }
+  .category-section:last-child { margin-bottom: 0; }
 
   .category-heading {
     font-size: 2rem;
-    margin-bottom: 30px;
+    margin-bottom: 24px;
     font-weight: 700;
     display: inline-block;
   }
 
-  .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 30px;
-  }
-
-  .project-card {
-    overflow: hidden;
+  .projects-list {
     display: flex;
     flex-direction: column;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    gap: 16px;
   }
 
-  .project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  /* Accordion card */
+  .project-accordion {
+    border-radius: 16px;
+    overflow: hidden;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .project-accordion.open {
     border-color: var(--accent-primary);
+    box-shadow: 0 0 30px rgba(63,185,80,0.15);
   }
 
-  .project-image {
-    height: 220px;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-  }
-
-  .project-image-link {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-  }
-
-  .project-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(13, 17, 23, 0.8);
+  /* Header row */
+  .accordion-header {
     display: flex;
     align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    gap: 24px;
+    padding: 20px 24px;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.2s;
+  }
+  .accordion-header:hover { background: rgba(255,255,255,0.03); }
+
+  .accordion-thumb {
+    width: 120px;
+    height: 80px;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
   }
 
-  .project-card:hover .project-overlay {
-    opacity: 1;
+  .accordion-meta {
+    flex: 1;
+    min-width: 0;
   }
-
-  .project-link-btn {
-    padding: 10px 20px;
-    background: var(--accent-primary);
-    color: #fff;
-    border-radius: 20px;
-    font-weight: 600;
-    transform: translateY(20px);
-    transition: transform 0.3s ease;
+  .accordion-meta h3 {
+    font-size: 1.3rem;
+    margin: 4px 0 8px;
   }
-
-  .project-card:hover .project-link-btn {
-    transform: translateY(0);
-  }
-
-  .project-info {
-    padding: 25px;
-    flex-grow: 1;
+  .accordion-meta p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
   }
 
   .platform {
-    font-size: 0.85rem;
+    font-size: 0.78rem;
     color: var(--accent-secondary);
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 600;
     display: block;
-    margin-bottom: 10px;
   }
 
-  h3 {
-    margin-bottom: 15px;
+  .accordion-toggle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+    color: var(--accent-primary);
+  }
+  .chevron {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+  }
+  .project-accordion.open .chevron {
+    transform: rotate(180deg);
+  }
+  .toggle-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    letter-spacing: 0.5px;
+  }
+
+  /* App store button inside card */
+  .app-store-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 7px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.82rem;
+    background: var(--accent-glow);
+    border: 1px solid var(--accent-primary);
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  .app-store-btn:hover {
+    background: var(--accent-primary);
+    transform: translateY(-1px);
+  }
+
+  /* Accordion body */
+  .accordion-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .case-study-inner {
+    padding: 0 24px 30px;
+    border-top: 1px solid var(--border-color);
+    margin-top: 0;
+  }
+
+  /* Detail sections inside accordion */
+  .detail-section {
+    display: flex;
+    gap: 40px;
+    padding: 36px 0;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+  .detail-section:last-child { border-bottom: none; }
+  .detail-section.reverse { flex-direction: row-reverse; }
+
+  .text-content { flex: 1; }
+  .text-content h4 {
+    color: var(--accent-primary);
+    margin-bottom: 16px;
     font-size: 1.4rem;
   }
+  .text-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: var(--text-primary);
+    line-height: 1.6;
+  }
+  .text-content li {
+    margin-bottom: 12px;
+    font-size: 1rem;
+  }
 
-  p {
-    color: var(--text-secondary);
-    line-height: 1.5;
-    margin: 0;
-    font-size: 0.95rem;
+  .image-content { flex: 1; }
+
+  .single-image {
+    width: 100%;
+    height: auto;
+    max-height: 380px;
+    object-fit: contain;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.2);
+    display: block;
+    cursor: zoom-in;
+    transition: transform 0.3s ease;
+  }
+  .single-image:hover { transform: scale(1.02); }
+
+  .double-images {
+    display: flex;
+    gap: 12px;
+  }
+  .double-images img {
+    width: calc(50% - 6px);
+    height: auto;
+    max-height: 380px;
+    object-fit: contain;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.2);
+    cursor: zoom-in;
+    transition: transform 0.3s ease;
+  }
+  .double-images img:hover { transform: scale(1.02); }
+
+  /* Modal */
+  .proj-modal {
+    border: none;
+    border-radius: 12px;
+    background: rgba(13, 17, 23, 0.97);
+    padding: 20px;
+    max-width: 90vw;
+    max-height: 90vh;
+    backdrop-filter: blur(10px);
+  }
+  .proj-modal::backdrop {
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(5px);
+  }
+  .proj-modal-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .proj-modal-content img {
+    max-width: 100%;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 8px;
+  }
+  .proj-close-btn {
+    position: absolute;
+    top: -15px;
+    right: -10px;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    background: var(--card-bg);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.2s;
+  }
+  .proj-close-btn:hover { background: var(--accent-primary); }
+
+  @media (max-width: 768px) {
+    .accordion-thumb { width: 80px; height: 60px; }
+    .detail-section, .detail-section.reverse { flex-direction: column; }
+    .double-images { flex-direction: column; }
+    .double-images img { width: 100%; }
+    .accordion-header { gap: 14px; padding: 16px; }
   }
 </style>
