@@ -1,0 +1,79 @@
+---
+---
+<section id="education" class="section container">
+  <h2 class="section-title">Education</h2>
+  
+  <div class="education-card glass">
+    <div class="edu-header">
+      <img src="/images/speed_school_logo.png" alt="Speed School Logo" class="uni-logo" />
+      <div>
+        <h3>Bachelor of Arts, Computer Science</h3>
+        <p class="university">J.B. Speed School of Engineering, University of Louisville</p>
+      </div>
+    </div>
+    <div class="edu-details">
+      <span class="location">Louisville, Kentucky</span>
+      <span class="date">Expected December 2026</span>
+    </div>
+  </div>
+</section>
+
+<style>
+  .education-card {
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .edu-header {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .uni-logo {
+    height: 70px;
+    width: auto;
+    max-width: 140px;
+    object-fit: contain;
+    background: white;
+    padding: 8px;
+    border-radius: 8px;
+  }
+
+  h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.5rem;
+  }
+
+  .university {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--text-primary);
+  }
+
+  .edu-details {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--border-color);
+    padding-top: 20px;
+    margin-top: 10px;
+    color: var(--text-secondary);
+  }
+
+  @media (max-width: 600px) {
+    .edu-header {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .edu-details {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+</style>

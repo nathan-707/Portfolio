@@ -1,0 +1,63 @@
+---
+---
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="logo">Nathan Eriksen</div>
+      <div class="footer-links">
+        <a href="https://github.com/nathan-707" target="_blank">GitHub</a>
+        <a href="mailto:nperik01@louisville.edu">Email</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; {new Date().getFullYear()} Nathan Eriksen. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    border-top: 1px solid var(--border-color);
+    padding: 60px 0 30px;
+    margin-top: 80px;
+    background: rgba(13, 17, 23, 0.8);
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #fff;
+    background: linear-gradient(90deg, #fff, var(--accent-primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 20px;
+  }
+
+  .footer-links a {
+    color: var(--text-secondary);
+    font-weight: 500;
+  }
+
+  .footer-links a:hover {
+    color: var(--accent-primary);
+  }
+
+  .footer-bottom {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
+</style>

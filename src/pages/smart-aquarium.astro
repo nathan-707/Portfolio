@@ -1,0 +1,421 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout>
+  <main class="container">
+    <a href="/" class="back-link">← Back to Portfolio</a>
+
+    <header class="project-header">
+      <h1 class="gradient-text">Automated Smart Aquarium System</h1>
+      <p class="subtitle">
+        A fully automated aquarium ecosystem featuring intelligent feeding
+        reminders, precise water quality monitoring, and seamless iOS
+        integration.
+      </p>
+    </header>
+
+    <div class="project-content">
+      <div class="detail-section glass animate-fade-in">
+        <div class="image-wrapper double-images">
+          <img
+            src="/images/aquarium_cad_full.png"
+            alt="Complete 3D CAD Model of the Smart Aquarium Ecosystem"
+          />
+          <img
+            src="/images/aquarium_cad_lid.png"
+            alt="Detailed Interior CAD View of the Smart Aquarium Lid"
+          />
+        </div>
+        <div class="text-content">
+          <h2>Custom 3D Enclosure Design</h2>
+          <ul>
+            <li>
+              Designed and 3D printed a custom aquarium lid using Autodesk
+              Fusion 360.
+            </li>
+            <li>
+              Engineered the structure to house the electronics and sensors
+              safely above the water line while maintaining a sleek aesthetic.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        class="detail-section glass animate-fade-in"
+        style="animation-delay: 0.1s"
+      >
+        <div class="text-content">
+          <h2>Modular 3D Components</h2>
+          <ul>
+            <li>
+              Engineered modular 3D-printed components including the main
+              electronics panel, lid, panel tabs, and feeding button.
+            </li>
+            <li>
+              Designed the entire structure within a single assembly file in
+              Fusion 360, creating every part as a dedicated sub-component for
+              perfect alignment.
+            </li>
+            <li>
+              Ensured precise fitment for the custom PCB and motors, minimizing
+              assembly time and maximizing durability.
+            </li>
+          </ul>
+        </div>
+        <div
+          class="image-wrapper"
+          style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; background: transparent;"
+        >
+          <img
+            src="/images/aquarium_cad_main_panel.png"
+            alt="3D CAD Design of the Main Electronics Panel"
+            style="background: rgba(0,0,0,0.2); border-radius: 8px; width: 100%; height: 100%; object-fit: contain;"
+          />
+          <img
+            src="/images/aquarium_cad_lid_2.png"
+            alt="3D CAD Design of the Aquarium Lid Structure"
+            style="background: rgba(0,0,0,0.2); border-radius: 8px; width: 100%; height: 100%; object-fit: contain;"
+          />
+          <img
+            src="/images/aquarium_cad_feeding_button.png"
+            alt="3D CAD Design of the Automated Feeding Mechanism Button"
+            style="background: rgba(0,0,0,0.2); border-radius: 8px; width: 100%; height: 100%; object-fit: contain;"
+          />
+          <img
+            src="/images/aquarium_cad_panel_tabs.png"
+            alt="3D CAD Design of the Panel Mounting Tabs"
+            style="background: rgba(0,0,0,0.2); border-radius: 8px; width: 100%; height: 100%; object-fit: contain;"
+          />
+        </div>
+      </div>
+
+      <div
+        class="detail-section glass animate-fade-in"
+        style="animation-delay: 0.12s"
+      >
+        <div class="text-content">
+          <h2>Schematic</h2>
+          <ul>
+            <li>
+              Architected the complete electrical schematic integrating an ESP32
+              microcontroller.
+            </li>
+          </ul>
+        </div>
+        <div class="image-wrapper">
+          <img
+            src="/images/aquarium_schematic.png"
+            alt="Comprehensive Electrical Schematic for the Smart Aquarium System"
+          />
+        </div>
+      </div>
+
+      <div
+        class="detail-section glass animate-fade-in"
+        style="animation-delay: 0.15s"
+      >
+        <div class="image-wrapper">
+          <img
+            src="/images/aquarium_pcb.png"
+            alt="Custom Printed Circuit Board Layout for Aquarium Electronics"
+          />
+        </div>
+        <div class="text-content">
+          <h2>Custom PCB Design</h2>
+          <ul>
+            <li>
+              Designed a custom printed circuit board (PCB) to seamlessly
+              integrate the ESP32 microcontroller with all peripheral sensors.
+            </li>
+            <li>
+              Engineered the board to handle power distribution for the sensors
+              and custom LED lighting.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        class="detail-section glass animate-fade-in"
+        style="animation-delay: 0.2s"
+      >
+        <div class="text-content">
+          <h2>Hardware & Sensor Integration</h2>
+          <ul>
+            <li>
+              Powered by an ESP32 microcontroller that manages a complex array
+              of peripherals and sensors.
+            </li>
+            <li>
+              Integrated water quality monitoring (TDS and temperature), a water
+              level sensor, automated bubbler control, and a motorized feeding
+              mechanism.
+            </li>
+            <li>
+              Has custom warning light and manual feeding button to alert user
+              when its been too long since last feeding.
+            </li>
+          </ul>
+        </div>
+        <div class="image-wrapper">
+          <img
+            src="/images/aquarium_wiring.jpg"
+            alt="Detailed Wiring and Sensor Integration within the Smart Aquarium"
+          />
+        </div>
+      </div>
+
+      <div
+        class="detail-section glass animate-fade-in"
+        style="animation-delay: 0.4s"
+      >
+        <div class="image-wrapper">
+          <img
+            src="/images/aquarium_glowing.jpg"
+            alt="Smart Aquarium Illuminated with Custom Green LED Lighting"
+          />
+        </div>
+        <div class="text-content">
+          <h2>Custom LED Lighting</h2>
+          <ul>
+            <li>
+              Engineered dynamic custom LED lighting that can be personalized
+              directly from the app to create stunning visual effects.
+            </li>
+            <li>
+              The lighting system is fully controllable, allowing users to match
+              the ambiance to their environment.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        class="detail-section glass animate-fade-in"
+        style="animation-delay: 0.6s"
+      >
+        <div class="text-content">
+          <h2>Software & iOS Connectivity</h2>
+          <ul>
+            <li>
+              Integrated Apple's AccessorySetupKit for secure, seamless
+              Bluetooth and Wi-Fi pairing directly from an iOS device.
+            </li>
+            <li>
+              Created a custom iOS companion app using SwiftUI to control the
+              aquarium, schedule automated feeding times, and monitor water
+              parameters in real-time.
+            </li>
+          </ul>
+        </div>
+        <div class="image-wrapper double-images">
+          <img
+            src="/images/aquarium_app_finding.png"
+            alt="iOS Device Pairing with Smart Aquarium via Apple AccessorySetupKit"
+          />
+          <img
+            src="/images/aquarium_app_dashboard.png"
+            alt="Companion iOS Application Dashboard Built with SwiftUI"
+          />
+        </div>
+      </div>
+    </div>
+
+    <dialog id="image-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <img
+          id="modal-img"
+          src=""
+          alt="Expanded high-resolution image preview"
+        />
+      </div>
+    </dialog>
+  </main>
+  <Footer />
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const modal = document.getElementById("image-modal");
+      const modalImg = document.getElementById("modal-img");
+      const closeBtn = document.querySelector(".close-btn");
+      const images = document.querySelectorAll(".image-wrapper img");
+
+      images.forEach((img) => {
+        img.addEventListener("click", () => {
+          modalImg.src = img.src;
+          modal.showModal();
+        });
+      });
+
+      closeBtn.addEventListener("click", () => {
+        modal.close();
+      });
+
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          modal.close();
+        }
+      });
+    });
+  </script>
+</Layout>
+
+<style>
+  main {
+    padding-top: 40px;
+    padding-bottom: 80px;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-bottom: 40px;
+    font-weight: 500;
+  }
+
+  .project-header {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+
+  .project-header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .detail-section {
+    display: flex;
+    gap: 40px;
+    padding: 40px;
+    margin-bottom: 40px;
+    align-items: center;
+  }
+
+  .detail-section:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .image-wrapper {
+    flex: 1;
+    border-radius: 8px;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    max-height: 400px;
+    cursor: zoom-in;
+    transition: transform 0.3s ease;
+  }
+
+  .image-wrapper img:hover {
+    transform: scale(1.02);
+  }
+
+  .double-images {
+    display: flex;
+    gap: 10px;
+    background: transparent !important;
+  }
+
+  .double-images img {
+    width: calc(50% - 5px);
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  /* Modal Styles */
+  .modal {
+    border: none;
+    border-radius: 12px;
+    background: rgba(13, 17, 23, 0.95);
+    padding: 20px;
+    max-width: 90vw;
+    max-height: 90vh;
+    backdrop-filter: blur(10px);
+  }
+
+  .modal::backdrop {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+  }
+
+  .modal-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal-content img {
+    max-width: 100%;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 8px;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: -15px;
+    right: -10px;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    background: var(--card-bg);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.2s;
+  }
+
+  .close-btn:hover {
+    background: var(--accent-primary);
+  }
+
+  .text-content {
+    flex: 1;
+  }
+
+  .text-content h2 {
+    color: var(--accent-primary);
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+  }
+
+  .text-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: var(--text-primary);
+    line-height: 1.6;
+  }
+
+  .text-content li {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+  }
+
+  @media (max-width: 768px) {
+    .detail-section,
+    .detail-section:nth-child(even) {
+      flex-direction: column;
+    }
+  }
+</style>

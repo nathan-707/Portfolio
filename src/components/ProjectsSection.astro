@@ -1,0 +1,213 @@
+---
+const projectGroups = [
+  {
+    category: "Apple Vision Pro",
+    projects: [
+      {
+        title: "Shape Invader",
+        platform: "Apple Vision Pro",
+        description:
+          "Developed and launched an immersive spatial AR/VR game using RealityKit and SwiftUI. Featured among the first 600 apps globally available on the App Store during the Vision Pro launch.",
+        link: "/shape-invader",
+        image: "/images/shape_invader_gameplay_ar.png",
+        linkText: "View Case Study",
+      },
+      {
+        title: "Aircraft Show",
+        platform: "Apple Vision Pro",
+        description:
+          "A spatial computing experience built with SwiftUI and RealityKit, enabling users to visualize and interact with high-fidelity 3D aircraft models in fully immersive environments.",
+        link: "/airshow",
+        image: "/images/airshow_flight.jpg",
+        linkText: "View Case Study",
+      },
+    ]
+  },
+  {
+    category: "IoT & Embedded Systems",
+    projects: [
+      {
+        title: "Smart Clock",
+        platform: "IoT / 3D-Printed",
+        description:
+          "An internet-connected smart clock featuring real-time weather updates and dynamic LED effects. Built with a custom PCB, companion iOS app, AWS integration, and a custom C++ WeatherKit library.",
+        link: "/smart-clock",
+        image: "/images/smart_clock_final.jpg",
+        linkText: "View Case Study",
+      },
+      {
+        title: "Smart Aquarium",
+        platform: "IoT / 3D-Printed",
+        description:
+          "An automated aquarium system featuring feeding reminders, precise water quality monitoring, custom LED lighting, and seamless Apple AccessorySetupKit integration.",
+        link: "/smart-aquarium",
+        image: "/images/aquarium_glowing.jpg",
+        linkText: "View Case Study",
+      },
+    ]
+  },
+  {
+    category: "Native iOS Applications",
+    projects: [
+      {
+        title: "Commonwealth Family Chiro",
+        platform: "iOS App",
+        description:
+          "A comprehensive native iOS application empowering a local clinic with seamless online appointment scheduling, patient reviews, and streamlined communication.",
+        link: "/chiro-app",
+        backgroundColor: "linear-gradient(135deg, rgba(63, 185, 80, 0.2), rgba(13, 17, 23, 1))",
+        linkText: "View Case Study",
+      }
+    ]
+  }
+];
+---
+
+<section id="projects" class="section container">
+  <h2 class="section-title">Featured Projects</h2>
+
+  <div class="project-categories">
+    {
+      projectGroups.map((group) => (
+        <div class="category-section">
+          <h3 class="category-heading gradient-text">{group.category}</h3>
+          <div class="projects-grid">
+            {
+              group.projects.map((project) => (
+                <div class="project-card glass">
+                  <a href={project.link} class="project-image-link">
+                    <div
+                      class="project-image"
+                      style={project.image ? `background-image: url('${project.image}')` : `background: ${project.backgroundColor}; display: flex; align-items: center; justify-content: center;`}
+                    >
+                      {project.logo && (
+                        <img 
+                          src={project.logo} 
+                          alt={`${project.title} Logo`} 
+                          style="height: 120px; width: auto; object-fit: contain; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.3);" 
+                        />
+                      )}
+                      <div class="project-overlay">
+                        <span class="project-link-btn">{project.linkText}</span>
+                      </div>
+                    </div>
+                  </a>
+                  <div class="project-info">
+                    <span class="platform">{project.platform}</span>
+                    <h3>{project.title}</h3>
+                    <p>{project.description}</p>
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .category-section {
+    margin-bottom: 60px;
+  }
+
+  .category-section:last-child {
+    margin-bottom: 0;
+  }
+
+  .category-heading {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-weight: 700;
+    display: inline-block;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+  }
+
+  .project-card {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    border-color: var(--accent-primary);
+  }
+
+  .project-image {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+
+  .project-image-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .project-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(13, 17, 23, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .project-card:hover .project-overlay {
+    opacity: 1;
+  }
+
+  .project-link-btn {
+    padding: 10px 20px;
+    background: var(--accent-primary);
+    color: #fff;
+    border-radius: 20px;
+    font-weight: 600;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+  }
+
+  .project-card:hover .project-link-btn {
+    transform: translateY(0);
+  }
+
+  .project-info {
+    padding: 25px;
+    flex-grow: 1;
+  }
+
+  .platform {
+    font-size: 0.85rem;
+    color: var(--accent-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+  }
+
+  p {
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin: 0;
+    font-size: 0.95rem;
+  }
+</style>

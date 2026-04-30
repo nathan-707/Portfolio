@@ -1,0 +1,39 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HeroSection from '../components/HeroSection.astro';
+import SkillsSection from '../components/SkillsSection.astro';
+import ProjectsSection from '../components/ProjectsSection.astro';
+import ExperienceSection from '../components/ExperienceSection.astro';
+import EducationSection from '../components/EducationSection.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout>
+  <main>
+    <HeroSection />
+    <SkillsSection />
+    <ProjectsSection />
+    <ExperienceSection />
+    <EducationSection />
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  main {
+    position: relative;
+  }
+  
+  /* Add a subtle background glow */
+  main::before {
+    content: '';
+    position: fixed;
+    top: -20%;
+    left: -10%;
+    width: 50%;
+    height: 50%;
+    background: radial-gradient(circle, rgba(63, 185, 80, 0.1) 0%, transparent 70%);
+    z-index: -1;
+    pointer-events: none;
+  }
+</style>
