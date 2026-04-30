@@ -19,7 +19,7 @@ import Footer from "../components/Footer.astro";
     <div class="project-content">
       <div class="detail-section glass animate-fade-in">
         <div class="image-wrapper">
-          <img src="/images/airshow_ui.png" alt="Spatial User Interface for Airshow in Augmented Reality" />
+          <img src={import.meta.env.BASE_URL + "images/airshow_ui.png"} alt="Spatial User Interface for Airshow in Augmented Reality" />
         </div>
         <div class="text-content">
           <h2>Immersive Spatial Computing</h2>
@@ -61,10 +61,10 @@ import Footer from "../components/Footer.astro";
         </div>
         <div class="image-wrapper double-images">
           <img
-            src="/images/airshow_formation.png"
+            src={import.meta.env.BASE_URL + "images/airshow_formation.png"}
             alt="F-35 Fighter Jets Flying in Formation in Augmented Reality"
           />
-          <img src="/images/airshow_flight.jpg" alt="F-35 Aircraft Model Displayed in Augmented Reality" />
+          <img src={import.meta.env.BASE_URL + "images/airshow_flight.jpg"} alt="F-35 Aircraft Model Displayed in Augmented Reality" />
         </div>
       </div>
 
@@ -74,7 +74,7 @@ import Footer from "../components/Footer.astro";
       >
         <div class="image-wrapper">
           <img
-            src="/images/airshow_museum.jpg"
+            src={import.meta.env.BASE_URL + "images/airshow_museum.jpg"}
             alt="B-2 Spirit Stealth Bomber Showcased in Immersive Virtual Environment"
           />
         </div>

@@ -78,7 +78,7 @@ const projectGroups = [
                   <a href={project.link} class="project-image-link">
                     <div
                       class="project-image"
-                      style={project.image ? `background-image: url('${project.image}')` : `background: ${project.backgroundColor}; display: flex; align-items: center; justify-content: center;`}
+                      style={project.image ? `background-image: url('${import.meta.env.BASE_URL + project.image.slice(1)}')` : `background: ${project.backgroundColor}; display: flex; align-items: center; justify-content: center;`}
                     >
                       {project.logo && (
                         <img 

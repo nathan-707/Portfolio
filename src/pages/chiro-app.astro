@@ -20,8 +20,8 @@ import Footer from '../components/Footer.astro';
     <div class="project-content">
       <div class="detail-section glass animate-fade-in">
         <div class="image-wrapper double-images">
-          <img src="/images/chiro_about_top.png" alt="About Us Interface of the Chiropractic iOS Application" />
-          <img src="/images/chiro_about_bottom.png" alt="Clinic Services Interface of the Chiropractic iOS Application" />
+          <img src={import.meta.env.BASE_URL + "images/chiro_about_top.png"} alt="About Us Interface of the Chiropractic iOS Application" />
+          <img src={import.meta.env.BASE_URL + "images/chiro_about_bottom.png"} alt="Clinic Services Interface of the Chiropractic iOS Application" />
         </div>
         <div class="text-content">
           <h2>Custom User Interface</h2>
@@ -42,7 +42,7 @@ import Footer from '../components/Footer.astro';
           </ul>
         </div>
         <div class="image-wrapper">
-          <img src="/images/chiro_appointments.png" alt="Online Appointment Scheduling Interface of the Chiropractic iOS Application" style="max-width: 300px; margin: 0 auto; display: block;" />
+          <img src={import.meta.env.BASE_URL + "images/chiro_appointments.png"} alt="Online Appointment Scheduling Interface of the Chiropractic iOS Application" style="max-width: 300px; margin: 0 auto; display: block;" />
         </div>
       </div>
     </div>
